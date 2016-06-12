@@ -1,0 +1,5 @@
+{
+    "require": {
+        "matto1990/lastfm-api": "^1.2"
+    }
+}

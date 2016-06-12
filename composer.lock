@@ -1,0 +1,70 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "0447259d6060720f3c189f0fdca5c123",
+    "content-hash": "94d9635fa82a3525da82ed39e8471a8b",
+    "packages": [
+        {
+            "name": "matto1990/lastfm-api",
+            "version": "v1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matto1990/PHP-Last.fm-API.git",
+                "reference": "1cf9a8947bf756beb876d5f8e2af398058805e08"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matto1990/PHP-Last.fm-API/zipball/1cf9a8947bf756beb876d5f8e2af398058805e08",
+                "reference": "1cf9a8947bf756beb876d5f8e2af398058805e08",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "php": ">=5.3.3",
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LastFmApi\\": "src/lastfmapi/",
+                    "Tests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcos",
+                    "email": "devilcius@gmail.com"
+                },
+                {
+                    "name": "Matt",
+                    "email": "matt@oakes.ws"
+                }
+            ],
+            "description": "Last.fm webservice client",
+            "homepage": "https://github.com/matto1990/PHP-Last.fm-API",
+            "keywords": [
+                "api",
+                "last.fm",
+                "webservice client"
+            ],
+            "time": "2016-03-17 16:41:24"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

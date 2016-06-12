@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Now Listening</title>
+        <meta name="format-detection" content="telephone=no">
+        <link href="https://fonts.googleapis.com/css?family=Exo+2:400,400italic,200,200italic" rel="stylesheet" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/app.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="background" id="background"></div>
+        <div class="container">
+            <div class="container__index hidden" id="index">
+                <div class="index__title">Now Listening</div>
+                <div class="index__description">
+                    Enter your Last.FM username in the box below!
+                </div>
+                <div class="index__form">
+                    <input class="index__username" type="text" id="username" placeholder="flashwave_">
+                    <button class="index__submit fa fa-forward" id="submit"></button>
+                </div>
+                <div class="index__dev">
+                    <a class="fa fa-code" href="https://github.com/flashwave/now-listening" title="Written"></a> by <a class="fa fa-flash" href="https://flash.moe" title="flash"></a>
+                </div>
+            </div>
+            <div class="container__user hidden" id="user">
+                <div class="cover">
+                    <div class="cover__image" id="np_cover"></div>
+                </div>
+                <div class="info">
+                    <div class="info__title" id="np_title"></div>
+                    <div class="info__artist" id="np_artist"></div>
+                    <div class="info__flags" id="np_flags"></div>
+                    <div class="info__user">
+                        <div class="info__user-back" id="np_back">Back</div>
+                        <div class="info__user-name" id="np_user"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/app.js" type="text/javascript"></script>
+    </body>
+</html>
