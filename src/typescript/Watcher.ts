@@ -4,7 +4,7 @@ namespace NP
     {
         private static Fetcher: AJAX = null;
         private static CheckIntervalId: number = null;
-        private static CheckTimeout: number = 60 * 1000;
+        private static CheckTimeout: number = 15 * 1000;
         private static GetPath: string = "/get.php";
         private static User: string = null;
 
