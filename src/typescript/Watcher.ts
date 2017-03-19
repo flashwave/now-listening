@@ -9,8 +9,11 @@ namespace NP
         private static User: string = null;
 
         public static Start(user: string): void {
-            this.User = user;
+            if (this.Fetcher !== null) {
+                this.Stop();
+            }
 
+            this.User = user;
             this.Fetcher = new AJAX;
 
             this.Fetcher.AddCallback(200, () => {
