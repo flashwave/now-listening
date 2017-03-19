@@ -1,7 +1,7 @@
 node_modules/*
 vendor/*
 public/app.*
-config.ini
+.apikey
 [Tt]humbs.db
 desktop.ini
 $RECYCLE.BIN/

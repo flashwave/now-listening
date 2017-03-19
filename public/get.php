@@ -14,13 +14,13 @@ if (!file_exists('../vendor/autoload.php')) {
 
 require_once '../vendor/autoload.php';
 
-if (!file_exists('../config.ini')) {
-    die(view(['error' => 'Configuration missing! Make a copy of config.example.ini named config.ini and set your API key.']));
+if (!file_exists('../.apikey')) {
+    die(view(['error' => 'API key file missing! Create a file called ".apikey" in the root directory and place your last.fm api key in there.']));
 }
 
-$config = parse_ini_file('../config.ini');
+$api_key = trim(file_get_contents('../.apikey'));
 
-$auth = new AuthApi('setsession', ['apiKey' => $config['api_key']]);
+$auth = new AuthApi('setsession', ['apiKey' => $api_key]);
 $user = new UserApi($auth);
 $now = $user->getRecentTracks(['user' => (isset($_GET['u']) ? $_GET['u'] : ''), 'limit' => '1']);
 
