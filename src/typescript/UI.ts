@@ -87,18 +87,31 @@ namespace NP
             }
         }
 
-        public static RegisterHooks(): void {
-            UI.InfoBack.addEventListener('click', () => {
+        public static Update(): void {
+            var user: string = location.hash.substring(2);
+
+            if (user.length > 0) {
+                Watcher.Start(user);
+                UI.Mode(Mode.USER);
+            } else {
                 Watcher.Stop();
                 UI.Mode(Mode.INDEX);
-                NP.UI.Background(NP.Background.COLOURFADE);
+                UI.Background(Background.COLOURFADE);
+            }
+        }
+
+        public static RegisterHooks(): void {
+            UI.InfoBack.addEventListener('click', () => {
                 location.hash = '';
             });
 
             var enter: Function = () => {
                 location.hash = '#/' + UI.FormUsername.value;
-                Watcher.Start(UI.FormUsername.value);
             };
+
+            window.addEventListener('hashchange', () => {
+                UI.Update();
+            });
 
             UI.FormSubmit.addEventListener('click', () => {
                 enter.call(this);

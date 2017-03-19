@@ -61,8 +61,8 @@ namespace NP
         }
 
         // Shorthand for the first element of getElementsByClassName
-        public static Class(className: string): NodeListOf<HTMLElement> {
-            return <NodeListOf<HTMLElement>>document.getElementsByClassName(className);
+        public static Class(className: string): NodeListOf<Element> {
+            return <NodeListOf<Element>>document.getElementsByClassName(className);
         }
 
         // Shorthand for prepending
